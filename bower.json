@@ -1,0 +1,17 @@
+{
+  "name": "link-display",
+  "version": "1.0.0",
+  "description": "\n    \n    \n    \n  ",
+  "main": "link-display.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "iron-flex-layout": "*",
+    "icon-icons": "*",
+    "iron-icon": "PolymerElements/iron-icon#e77365a99a",
+    "paper-toolbar": "PolymerElements/paper-toolbar#~1.1.7",
+    "paper-item": "PolymerElements/paper-item#ad314fa38f"
+  }
+}
