@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "iron-flex-layout": "*",
-    "icon-icons": "*",
+    "iron-icons": "PolymerElements/iron-icons",
     "iron-icon": "PolymerElements/iron-icon#e77365a99a",
     "paper-toolbar": "PolymerElements/paper-toolbar#~1.1.7",
     "paper-item": "PolymerElements/paper-item#ad314fa38f"
