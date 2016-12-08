@@ -1,6 +1,7 @@
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../paper-toolbar/paper-toolbar.html">
 <link rel="import" href="../paper-item/paper-item.html">
+<link rel="import" href="../icon-image/iron-image.html">
 <link rel="import" href="../icon-icons/iron-icons.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <!--
@@ -35,10 +36,9 @@
       <div class="title">{{title}}</div>
     </paper-toolbar>
     <div class="container">
-      <img src="[[image]]" />
+      <iron-image src="[[image]]"></iron-image>
     </div>
     <paper-item>{{desc}}</paper-item>
-    
   </template>
 </dom-module>
 <script>
