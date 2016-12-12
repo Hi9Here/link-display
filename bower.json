@@ -14,5 +14,8 @@
     "paper-toolbar": "PolymerElements/paper-toolbar#~1.1.7",
     "paper-item": "PolymerElements/paper-item#ad314fa38f",
     "iron-image": "PolymerElements/iron-image"
+  },
+  "resolutions": {
+    "iron-icon": "^1.0.0"
   }
 }
