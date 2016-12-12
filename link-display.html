@@ -1,7 +1,7 @@
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../paper-toolbar/paper-toolbar.html">
-<link rel="import" href="../icon-image/iron-image.html">
-<link rel="import" href="../icon-icons/iron-icons.html">
+<link rel="import" href="../iron-image/iron-image.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <!--
   `<link-display></link-display>` card for links
@@ -18,16 +18,13 @@
       iron-image {
         height: 100px;
         width: 100px;
-        margin: 10px 0px 0px 0px;
+        margin: 5px 0px 5px 0px;
       }
       paper-toolbar {
-        --paper-toolbar-title: {
-          font-size: 20px;
-          margin-left: 10px;
-        };
-        --paper-toolbar-sm-height: 23px;
-        --paper-toolbar-height: 23px;
+        --paper-toolbar-sm-height: 35px;
+        --paper-toolbar-height: 35px;
       }
+      
       h2 {
         font-weight: 300;
         font-size: 18px;
@@ -47,18 +44,20 @@
       }
       #card-title {
         display: block;
-        width: 190px;
+        width: 180px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        margin: 5px;
+        margin: 0px 10px;
       }
       #card-text {
+        text-align: left;
         display: block;
-        width: 190px;
+        width: 180px;
+        height: 63px;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin: 5px;
+        margin: 10px;
       }
 
     </style>
