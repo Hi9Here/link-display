@@ -1,6 +1,5 @@
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../paper-toolbar/paper-toolbar.html">
-<link rel="import" href="../paper-item/paper-item.html">
 <link rel="import" href="../icon-image/iron-image.html">
 <link rel="import" href="../icon-icons/iron-icons.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
@@ -11,16 +10,15 @@
 <dom-module id="link-display">
   <template>
     <style is="custom-style">
-      :host {display:block;color:#505050;}
-      .container {
-        width:100%;
-        max-height:100px;
-        @apply(--layout-horizontal);
-        @apply(--layout-center-justified);
-      }
-      .container iron-image {
-        max-width:100%;
-        max-height:100%;
+      :host {
+        display:block;
+        color:#505050;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        }
+      iron-image {
+        height: 100px;
+        width: 100px;
+        margin: 10px 0px 0px 0px;
       }
       paper-toolbar {
         --paper-toolbar-title: {
@@ -30,15 +28,54 @@
         --paper-toolbar-sm-height: 23px;
         --paper-toolbar-height: 23px;
       }
+      h2 {
+        font-weight: 300;
+        font-size: 18px;
+        margin: 0px;
+      }
+      .container {
+        text-align: center;
+        display: block;
+      }
+      h3 {
+        font-weight: 300;
+        font-size: 14px;
+        margin: 0px;
+      }
+      #card-image {
+        display: inline-block;
+      }
+      #card-title {
+        display: block;
+        width: 190px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 5px;
+      }
+      #card-text {
+        display: block;
+        width: 190px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 5px;
+      }
+
     </style>
     <paper-toolbar>
       <iron-icon icon="bookmark" style="height:90%;"></iron-icon>
     </paper-toolbar>
     <div class="container">
-      <div class="title">{{title}}</div>
-      <iron-image src="[[image]]"></iron-image>
+      <div id="card-image">
+        <iron-image src="[[image]]"sizing="cover"></iron-image>
+      </div>
+      <div id="card-title">
+        <h2>{{title}}</h2>
+      </div>
+      <div id="card-text">
+        <h3>{{desc}}</h3>
+      </div>
     </div>
-    <paper-item>{{desc}}</paper-item>
   </template>
 </dom-module>
 <script>
