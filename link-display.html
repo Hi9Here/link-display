@@ -61,8 +61,10 @@
     </style>
     <paper-toolbar>
       <iron-icon icon="bookmark" style="height:90%"></iron-icon>
-      <div flex></div>
-      <iron-icon icon="more-vert" style="height:90%"></iron-icon>
+      <div class="title" ></div>
+      <template is="dom-if" if="{{edit}}">
+        <iron-icon on-tap="editThis(__key)" icon="more-vert" style="height:90%"></iron-icon>
+      </template>
     </paper-toolbar>
     <div class="container">
       <div id="card-image">
@@ -80,5 +82,8 @@
 <script>
   Polymer({
     is: "link-display"
+    editThis: function(key) {
+      this.fire("editThis", key)
+    }
   })
 </script>
