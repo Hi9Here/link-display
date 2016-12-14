@@ -82,6 +82,12 @@
 <script>
   Polymer({
     is: "link-display",
+    properties:{
+      edit:{
+        type:Boolean,
+        value:false,
+      }
+    },
     editThis: function(key) {
       this.fire("editThis", key)
     }
