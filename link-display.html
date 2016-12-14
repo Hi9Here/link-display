@@ -63,7 +63,7 @@
       <iron-icon icon="bookmark" style="height:90%"></iron-icon>
       <div class="title" ></div>
       <template is="dom-if" if="{{edit}}">
-        <iron-icon on-tap="editThis" icon="more-vert" style="height:90%"></iron-icon>
+        <iron-icon id="edit" icon="more-vert" style="height:90%"></iron-icon>
       </template>
     </paper-toolbar>
     <div class="container">
@@ -87,9 +87,6 @@
         type:Boolean,
         value:false,
       }
-    },
-    editThis: function() {
-      this.fire("editing", this.__key)
     }
   })
 </script>
