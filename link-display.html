@@ -18,10 +18,6 @@
       iron-image {
         margin: 5px 0px 5px 0px;
       }
-      paper-toolbar {
-        --paper-toolbar-sm-height: 35px;
-        --paper-toolbar-height: 35px;
-      }
       h2 {
         font-weight: 300;
         font-size: 18px;
@@ -57,13 +53,6 @@
         margin: 10px;
       }
     </style>
-    <paper-toolbar>
-      <iron-icon icon="bookmark" style="height:90%"></iron-icon>
-      <div class="title" ></div>
-      <template is="dom-if" if="{{edit}}">
-        <iron-icon id="edit" icon="more-vert" style="height:90%"></iron-icon>
-      </template>
-    </paper-toolbar>
     <div class="container">
       <div id="card-image">
         <iron-image src="[[image]]"></iron-image>
