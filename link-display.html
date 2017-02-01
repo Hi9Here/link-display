@@ -54,13 +54,13 @@
     </style>
     <div class="container">
       <div id="card-image">
-        <iron-image src="[[image]]"></iron-image>
+        <iron-image src="[[link.image]]"></iron-image>
       </div>
       <div id="card-title">
-        <h2>{{title}}</h2>
+        <h2>[[link.title]]</h2>
       </div>
       <div id="card-text">
-        <h3>{{desc}}</h3>
+        <h3>[[link.desc]]</h3>
       </div>
     </div>
   </template>
@@ -68,11 +68,5 @@
 <script>
   Polymer({
     is: "link-display",
-    properties:{
-      edit:{
-        type:Boolean,
-        value:false,
-      }
-    }
   })
 </script>
