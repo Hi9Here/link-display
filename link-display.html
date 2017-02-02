@@ -52,9 +52,8 @@
         margin: 10px;
       }
     </style>
-    <div class="container">
+    <div class="container" on-tap="open">
       <div id="card-image">
-        <iron-image src="[[link.cardIcon]]"></iron-image>
         <iron-image src="[[link.image]]"></iron-image>
       </div>
       <div id="card-title">
@@ -74,6 +73,9 @@
         type: Object,
         notify: true,
       },
+    },
+    open:function(){
+      this.fire("open")
     }
   })
 </script>
