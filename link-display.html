@@ -66,8 +66,12 @@
       </template>
       <template is="dom-if" if="[[title]]">
         <div id="card-image">
-          <iron-image src="[[image]]"></iron-image>
-          <iron-image src="[[cardicon]]"></iron-image>
+          <template is="dom-if" if="[[image]]">
+            <iron-image src="[[image]]"></iron-image>
+          </template>
+          <template is="dom-if" if="[[cardicon]]">
+            <iron-image src="[[cardicon]]"></iron-image>
+          </template>
         </div>
         <div id="card-title">
           <h2>[[title]]</h2>
