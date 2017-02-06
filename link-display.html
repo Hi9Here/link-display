@@ -64,7 +64,7 @@
           <h3>[[link.desc]]</h3>
         </div>
       </template>
-      <template is="dom-if" if="[[!link]]">
+      <template is="dom-if" if="[[title]]">
         <div id="card-image">
           <iron-image src="[[image]]"></iron-image>
           <iron-image src="[[cardicon]]"></iron-image>
@@ -85,7 +85,6 @@
     properties: {
       link: {
         type: Object,
-        notify: true,
       },
     },
     open:function(){
