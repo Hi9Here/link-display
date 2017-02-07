@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>link-display</title>
+    <script src="../../webcomponentsjs/webcomponents.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+    <script src="../../iron-test-helpers/mock-interactions.js"></script>
+    <link rel="import" href="../../polymer/polymer.html">
+    <link rel="import" href="../../test-fixture/test-fixture.html">
+    <link rel="import" href="../link-display.html">
+  </head>
+  <body>
+    <test-fixture id="linkDisplay">
+      <template>
+        <link-display></link-display> //add attributes
+      </template>
+    </test-fixture>
+    <script>
+      suite('<link-display>', function () {
+        var linkDisplay;
+        setup(function () {
+          linkDisplay = fixture('linkDisplay');
+        });
+        teardown(function () {
+          //...
+        });
+        suite('basic usage', function () {
+          test('can be triggered with space', function(done) {
+            linkDisplay.addEventListener('keydown', function() {
+              done()
+            })
+            MockInteractions.pressSpace(linkDisplay)
+          })
+          test('can be clicked', function(done) {
+            linkDisplay.addEventListener('click', function() {
+              done()
+            })
+            MockInteractions.tap(linkDisplay)
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
