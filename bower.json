@@ -9,13 +9,10 @@
   ],
   "dependencies": {
     "iron-flex-layout": "*",
-    "iron-icons": "PolymerElements/iron-icons",
-    "iron-icon": "PolymerElements/iron-icon#e77365a99a",
-    "paper-toolbar": "PolymerElements/paper-toolbar#~1.1.7",
-    "paper-item": "PolymerElements/paper-item#ad314fa38f",
     "iron-image": "PolymerElements/iron-image"
   },
-  "resolutions": {
-    "iron-icon": "^1.0.0"
+  "devDependencies": {
+    "iron-test-helpers": "*",
+    "web-component-tester": "^5.0.0"
   }
 }
