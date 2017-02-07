@@ -1,6 +1,7 @@
 language: node_js
 sudo: required
 node_js: stable
+dist: trusty
 addons:
   apt:
     sources:
@@ -11,6 +12,6 @@ before_script:
 - npm install web-component-tester
 - npm install bower
 - export PATH=$PWD/node_modules/.bin:$PATH
-- bower install
+- bower install -s
 script:
-- xvfb-run wct --skip-plugin sauce
+- xvfb-run wct --skip-plugin sauce --quiet
