@@ -93,6 +93,10 @@
     },
     open:function(){
       this.fire("open")
+      var that = this
+      setTimeout(function () {
+        window.location.href = this.link.link
+      }, 10)
     }
   })
 </script>
