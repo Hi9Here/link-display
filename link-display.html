@@ -72,7 +72,7 @@
             <iron-image src="[[image]]"></iron-image>
           </template>
           <template is="dom-if" if="[[cardicon]]">
-            <iron-image src="[[cardicon]]"></iron-image>
+            <iron-image contain src="[[cardicon]]"></iron-image>
           </template>
         </div>
         <div id="card-title">
@@ -96,9 +96,9 @@
     open:function(){
       this.fire("open")
       var that = this
-      setTimeout(function () {
-        window.location.href = that.link.link
-      }, 10)
+     // setTimeout(function () {
+        window.open (that.link.link,"_blank")
+     // }, 10)
     }
   })
 </script>
