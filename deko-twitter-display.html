@@ -3,10 +3,10 @@
 <link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <!--
-  `<link-display></link-display>` Card Displaying a link
+  `<deko-twitter-display></deko-twitter-display>` Card Displaying a link
   @demo demo.html
 -->
-<dom-module id="link-display">
+<dom-module id="deko-twitter-display">
   <template>
     <style is="custom-style">
       :host {
@@ -36,7 +36,7 @@
       #card-image {
         display: inline-block;
       }
-      #card-title {
+      .card-title {
         display: block;
         width: 180px;
         overflow: hidden;
@@ -44,7 +44,7 @@
         text-overflow: ellipsis;
         margin: 0px 10px;
       }
-      #card-text {
+      .card-text {
         text-align: left;
         display: block;
         width: 180px;
@@ -59,10 +59,10 @@
         <div id="card-image">
           <iron-image src="[[link.image]]"></iron-image>
         </div>
-        <div id="card-title">
+        <div class="card-title">
           <h2>[[link.title]]</h2>
         </div>
-        <div id="card-text">
+        <div class="card-text">
           <h3>[[link.desc]]</h3>
         </div>
       </template>
@@ -75,10 +75,10 @@
             <iron-image src="[[cardicon]]"></iron-image>
           </template>
         </div>
-        <div id="card-title">
+        <div class="card-title">
           <h2>[[title]]</h2>
         </div>
-        <div id="card-text">
+        <div class="card-text">
           <h3>[[desc]]</h3>
         </div>
       </template>
@@ -87,7 +87,7 @@
 </dom-module>
 <script>
   Polymer({
-    is: "link-display",
+    is: "deko-twitter-display",
     properties: {
       link: {
         type: Object,
