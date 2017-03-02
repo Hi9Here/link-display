@@ -97,7 +97,7 @@
       this.fire("open")
       var that = this
      // setTimeout(function () {
-        window.open (that.link.link,"_blank")
+        window.open (that.link || that.link.link,"_blank")
      // }, 10)
     }
   })
