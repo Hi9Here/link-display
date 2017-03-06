@@ -57,7 +57,7 @@
     <div class="container" on-tap="open">
       <template is="dom-if" if="[[link.title]]">
         <div id="card-image">
-          <iron-image src="[[link.image]]"></iron-image>
+          <iron-image contain src="[[link.image]]"></iron-image>
         </div>
         <div id="card-title">
           <h2>[[link.title]]</h2>
@@ -69,7 +69,7 @@
       <template is="dom-if" if="[[title]]">
         <div id="card-image">
           <template is="dom-if" if="[[image]]">
-            <iron-image src="[[image]]"></iron-image>
+            <iron-image contain src="[[image]]"></iron-image>
           </template>
           <template is="dom-if" if="[[cardicon]]">
             <iron-image contain src="[[cardicon]]"></iron-image>
