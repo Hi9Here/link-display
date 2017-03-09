@@ -92,14 +92,20 @@
       link: {
         type: Object,
       },
+      notOpen:{
+        type:Boolean,
+        value:false,
+      },
     },
     open:function(){
-      this.fire("open")
+      this.fire("open","link-display")
       var that = this
-      if ( typeof that.link === 'string') { 
-        window.open (that.link ,"_blank")
-      } else {
-        window.open (that.link.link ,"_blank")
+      if (!this.notOpen) {
+        if ( typeof that.link === 'string') { 
+          window.open (that.link ,"_blank")
+        } else {
+          window.open (that.link.link ,"_blank")
+        }
       }
     }
   })
