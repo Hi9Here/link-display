@@ -28,15 +28,7 @@
         text-align: center;
         display: block;
       }
-      h3 {
-        font-weight: 300;
-        font-size: 14px;
-        margin: 0px;
-      }
-      #card-image {
-        display: inline-block;
-      }
-      #card-title {
+      h2 {
         display: block;
         width: 180px;
         overflow: hidden;
@@ -44,8 +36,10 @@
         text-overflow: ellipsis;
         margin: 0px 10px;
       }
-      #card-text {
+      h3 {
         text-align: left;
+        font-weight: 300;
+        font-size: 14px;
         display: block;
         width: 180px;
         height: 63px;
@@ -56,31 +50,19 @@
     </style>
     <div class="container" on-tap="open">
       <template is="dom-if" if="[[link.title]]">
-        <div id="card-image">
-          <iron-image contain src="[[link.image]]"></iron-image>
-        </div>
-        <div id="card-title">
-          <h2>[[link.title]]</h2>
-        </div>
-        <div id="card-text">
-          <h3>[[link.desc]]</h3>
-        </div>
+        <iron-image contain src="[[link.image]]"></iron-image>
+        <h2>[[link.title]]</h2>
+        <h3>[[link.desc]]</h3>
       </template>
       <template is="dom-if" if="[[title]]">
-        <div id="card-image">
-          <template is="dom-if" if="[[image]]">
-            <iron-image contain src="[[image]]"></iron-image>
-          </template>
-          <template is="dom-if" if="[[cardicon]]">
-            <iron-image contain src="[[cardicon]]"></iron-image>
-          </template>
-        </div>
-        <div id="card-title">
-          <h2>[[title]]</h2>
-        </div>
-        <div id="card-text">
-          <h3>[[desc]]</h3>
-        </div>
+        <template is="dom-if" if="[[image]]">
+          <iron-image contain src="[[image]]"></iron-image>
+        </template>
+        <template is="dom-if" if="[[cardicon]]">
+          <iron-image contain src="[[cardicon]]"></iron-image>
+        </template>
+        <h2>[[title]]</h2>
+        <h3>[[desc]]</h3>
       </template>
     </div>
   </template>
