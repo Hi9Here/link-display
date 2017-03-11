@@ -92,7 +92,7 @@
       link: {
         type: Object,
       },
-      notOpen:{
+      locked:{
         type:Boolean,
         value:false,
       },
@@ -100,7 +100,7 @@
     open:function(){
       this.fire("open","link-display")
       var that = this
-      if (!this.notOpen) {
+      if (!this.locked) {
         if ( typeof that.link === 'string') { 
           window.open (that.link ,"_blank")
         } else {
