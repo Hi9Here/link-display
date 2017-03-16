@@ -49,8 +49,12 @@
         text-overflow: ellipsis;
         margin: 10px;
       }
+      .card-view {
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+      }
     </style>
-    <div class="container" on-tap="open">
+    <div class="container card-view" on-tap="open">
       <template is="dom-if" if="[[link.title]]">
         <iron-image contain src="[[link.image]]"></iron-image>
         <h2>[[link.title]]</h2>
