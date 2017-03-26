@@ -9,10 +9,17 @@
   ],
   "dependencies": {
     "iron-flex-layout": "*",
-    "iron-image": "PolymerElements/iron-image"
+    "iron-image": "PolymerElements/iron-image",
+    "test-fixture": "PolymerElements/test-fixture#^2.0.1",
+    "iron-test-helpers": "PolymerElements/iron-test-helpers#^1.4.1",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.8"
   },
   "devDependencies": {
     "iron-test-helpers": "*",
     "web-component-tester": "^5.0.0"
+  },
+  "resolutions": {
+    "test-fixture": "^1.0.0"
   }
 }
