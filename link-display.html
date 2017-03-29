@@ -86,9 +86,46 @@
       link: {
         type: Object,
       },
+      pillar:Object,
+      pillars: {
+        computed:"getPillars(title,edit)",
+        notify:true,
+      },
+      value: {
+        value:"{}",
+        type:String,
+      },
+      opened: {
+        type:Boolean,
+        value:false,
+      },
       locked:{
         type:Boolean,
         value:false,
+      },
+      _updateFirebase: {
+        computed: "updateFirebase(value,key,opened)",
+      },
+      _loadValue: {
+        computed: "loadFirebase(key,opened)",
+      },
+      image: {
+        value: "",
+      },
+      title: {
+        value: "",
+      },
+      desc: {
+        value: "",
+      },
+      _updateFirebaseCardImage: {
+        computed: "updateFirebaseCardImage(deck,key,opened,image)"
+      },
+      _updateFirebaseCardTitle: {
+        computed: "updateFirebaseCardTitle(deck,key,opened,title)"
+      },
+      _updateFirebaseCardDecs: {
+        computed: "updateFirebaseCardDecs(deck,key,opened,desc)"
       },
     },
     open:function(){
@@ -99,6 +136,8 @@
           window.open (that.link ,"_blank")
         } else if (typeof that.link.link === 'string') {
           window.open (that.link.link ,"_blank")
+        } else if (typeof that.value.link === 'string') {
+          window.open (that.value.link ,"_blank")
         }
       }
     }
