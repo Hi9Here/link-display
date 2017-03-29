@@ -97,7 +97,7 @@
       if (!this.locked) {
         if ( typeof that.link === 'string') { 
           window.open (that.link ,"_blank")
-        } else {
+        } else if (typeof that.link.link === 'string') {
           window.open (that.link.link ,"_blank")
         }
       }
